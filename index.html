@@ -1,28 +1,43 @@
 <!doctype html>
 <html>
 	<head>
-		<meta chartset="utf-8">
-		
+		<meta charset="utf-8">
+
 		<title>Class Scheduler</title>
 		<link rel="stylesheet" type="text/javascript" href="style/style.css">
-		<script type="text/javascript" src="script/script.js"></script>
 		<script type="text/javascript" src="script/dateInfo.js"></script>
+		<script type="text/javascript" src="script/script.js"></script>
 	</head>
 	<body>
 		<h1>Class Scheduler</h1>
 
-		<label>Start Date:
-			<input type="date" id="startDate">
-		</label>
+		<button type="button" id="fullYearSchedule">Full Year Schedule</button>
+		<button type="button" id="classSchedules">Class Schedules</button>
+		<button type="button" id="daySchedule">Day Schedule</button>
+		<button type="button" id="generateGoogleMeets">Generate Google Meets</button>
+
+		<div id="fys">A</div>
+		<div id="cs">B</div>
+		<div id="ds">C</div>
+
+		<div id="ggm">		
+			<label>Start Date:
+				<input type="date" id="startDate">
+			</label>
 
 			<br>
-			
-		<label>End Date:
-			<input type="date" id="endDate">
-		</label>
 
-		<br>
-		
-		<button type="button" id="datesButton">Generate Schedule</button>
+			<label>End Date:
+				<input type="date" id="endDate">
+			</label>
+
+			<br>
+
+			<button type="button" id="datesButton">Generate Schedule</button>
+
+			<!-- Holds a table with the completed schedule -->
+			<div id="schedule"></div>
+		</div>
+
 	</body>
 </html>
